@@ -1,0 +1,128 @@
+[
+  {
+    "id": "solis",
+    "title": "Solis — Premium Men's Seasonal Essentials E-Commerce Platform",
+    "category": "nextjs",
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=1000",
+    "description": "A premium e-commerce platform built for seasonal men's fashion.",
+    "fullDescription": "Solis is a high-end e-commerce solution designed to provide a seamless shopping experience for men's seasonal essentials. The platform emphasizes minimalism, speed, and a premium aesthetic to align with the luxury brand's identity. Built with Next.js and MongoDB, it offers robust performance and scalable data management.",
+    "tech": ["Next.js", "React.js", "MongoDB", "Tailwind", "Framer Motion"],
+    "contributions": [
+      "Built a secure authentication system using JWT and session management.",
+      "Created a highly responsive and fluid UI with Tailwind CSS and Framer Motion.",
+      "Integrated MongoDB for dynamic product management and user order history.",
+      "Optimized site performance for fast image rendering and SEO."
+    ],
+    "challenges": [
+      "Handling authentication securely across client and server components.",
+      "Managing complex state for the shopping cart and checkout process.",
+      "Ensuring consistent design across various screen sizes and devices."
+    ],
+    "improvements": [
+      "Add a complete Stripe payment system for production use.",
+      "Implement real-time inventory tracking and notifications.",
+      "Integrate an AI-powered size recommendation engine."
+    ],
+    "live": "#",
+    "github": "#"
+  },
+  {
+    "id": "daily-news",
+    "title": "Daily News — Real-Time Global Information Hub",
+    "category": "react",
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1000",
+    "description": "A fast, modern news aggregator and publishing platform.",
+    "fullDescription": "Daily News is a modern news platform that aggregates global stories and provides a space for independent journalism. It focuses on readability, accessibility, and real-time updates to keep users informed about world events as they happen.",
+    "tech": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind"],
+    "contributions": [
+      "Developed the real-time news feed using WebSockets.",
+      "Implemented a comprehensive search and filtering system for articles.",
+      "Created a dashboard for journalists to manage their publications.",
+      "Designed an accessible reader mode for enhanced user experience."
+    ],
+    "challenges": [
+      "Maintaining high performance under heavy traffic loads.",
+      "Implementing efficient data indexing for fast search results.",
+      "Ensuring consistent layout across different types of news content."
+    ],
+    "improvements": [
+      "Add support for multimedia content like podcasts and video news.",
+      "Implement a personalized news feed based on user interests.",
+      "Integrate social sharing features with deep linking."
+    ],
+    "live": "#",
+    "github": "#"
+  },
+  {
+    "id": "quantum-dashboard",
+    "title": "Quantum Analytics Dashboard",
+    "category": "nextjs",
+    "image": "https://images.unsplash.com/photo-1551288049-bbda38a5f452?auto=format&fit=crop&q=80&w=1000",
+    "description": "Enterprise-level analytics platform with real-time data visualization.",
+    "fullDescription": "Quantum is a sophisticated analytics dashboard designed for enterprise data monitoring. It features interactive charts, real-time performance tracking, and a highly customizable user interface.",
+    "tech": ["Next.js", "TypeScript", "D3.js", "Tailwind", "Supabase"],
+    "contributions": [
+      "Architected the real-time data synchronization layer.",
+      "Developed custom D3.js visualization components.",
+      "Implemented multi-tenant authorization system."
+    ],
+    "challenges": [
+      "Optimizing rendering performance for large datasets.",
+      "Maintaining state consistency across multiple dashboard widgets."
+    ],
+    "improvements": [
+      "Integrate machine learning for predictive analytics.",
+      "Add export functionality for PDF and CSV reports."
+    ],
+    "live": "#",
+    "github": "#"
+  },
+  {
+    "id": "minimal-portfolio",
+    "title": "Zenith - Minimalist Portfolio Template",
+    "category": "vanilla",
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=1000",
+    "description": "A clean, high-performance portfolio template for creative professionals.",
+    "fullDescription": "Zenith is a lightweight, SEO-optimized portfolio template built with raw performance in mind. It uses modern CSS techniques and minimal JavaScript to achieve near-perfect Lighthouse scores.",
+    "tech": ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+    "contributions": [
+      "Achieved 100/100 Lighthouse performance score.",
+      "Implemented smooth parallax scrolling effects.",
+      "Designed a responsive masonry grid layout."
+    ],
+    "challenges": [
+      "Optimizing asset delivery without a build step.",
+      "Ensuring cross-browser compatibility for modern CSS features."
+    ],
+    "improvements": [
+      "Add a built-in markdown blog system.",
+      "Implement a dark mode toggle with system preference detection."
+    ],
+    "live": "#",
+    "github": "#"
+  },
+  {
+    "id": "social-echo",
+    "title": "Social Echo — Privacy-First Social Network",
+    "category": "react",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
+    "description": "A decentralized social platform focusing on user privacy and data ownership.",
+    "fullDescription": "Social Echo redefines social media by putting users in control of their data. Built on a decentralized architecture, it ensures that your conversations remain private and your data belongs only to you.",
+    "tech": ["React", "Firebase", "WebRTC", "Tailwind"],
+    "contributions": [
+      "Implemented end-to-end encryption for private messages.",
+      "Built a P2P video calling feature using WebRTC.",
+      "Designed a minimalist, distraction-free user interface."
+    ],
+    "challenges": [
+      "Managing complex real-time data sync with Firebase.",
+      "Ensuring low latency for P2P connections."
+    ],
+    "improvements": [
+      "Add support for decentralized storage using IPFS.",
+      "Implement a community-driven moderation system."
+    ],
+    "live": "#",
+    "github": "#"
+  }
+]
