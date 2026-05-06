@@ -45,8 +45,14 @@ const About = () => {
                         <motion.div variants={fadeUp} className="space-y-unit-8">
                             <div>
                                 <h2 className="font-h2 text-3xl md:text-5xl text-zinc-900 dark:text-white mb-unit-6">About Me</h2>
-                                <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed">
-                                    Passionate about bridging the gap between design and code. With 5 years of experience, I specialize in React, Tailwind, and high-fidelity UI systems.
+                                <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
+                                    My journey into the world of programming began with a curiosity about how things work under the hood. What started as a hobby of tweaking HTML and CSS quickly evolved into a passion for building complex, scalable web applications.
+                                </p>
+                                <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
+                                    I truly enjoy the process of turning a design concept into a pixel-perfect, interactive reality. There's a unique satisfaction in solving complex logic problems and optimizing performance to ensure a seamless user experience. I specialize in the React ecosystem, leveraging modern tools to build UI systems that are not only beautiful but also accessible and efficient.
+                                </p>
+                                <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
+                                    Outside of the world of code, I'm an avid learner and explorer. You'll often find me reading about emerging technologies, experimenting with UI designs in Figma, or contributing to open-source projects. I also enjoy traveling, photography, and gaming, which help me stay creative and energized. I'm a lifelong student of design and technology, always looking for the next challenge to tackle.
                                 </p>
                             </div>
                             <div className="grid grid-cols-2 gap-unit-6">

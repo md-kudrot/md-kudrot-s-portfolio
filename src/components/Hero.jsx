@@ -56,30 +56,41 @@ const Hero = () => {
                                 <motion.button 
                                     whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 240, 255, 0.3)" }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="px-unit-8 py-unit-4 bg-primary-container text-on-primary-container font-bold rounded-full hover:brightness-110 transition-all shadow-lg"
+                                    onClick={() => window.open('#', '_blank')}
+                                    className="px-unit-8 py-unit-4 bg-primary-container text-on-primary-container font-black rounded-full hover:brightness-110 transition-all shadow-lg flex items-center gap-2"
                                 >
-                                    View Projects
+                                    Download Resume <span className="material-symbols-outlined">download</span>
                                 </motion.button>
                                 <motion.button 
                                     whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.05)" }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="px-unit-8 py-unit-4 border border-zinc-200 dark:border-outline-variant text-zinc-900 dark:text-on-surface font-bold rounded-full transition-all"
+                                    onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
+                                    className="px-unit-8 py-unit-4 border border-zinc-200 dark:border-outline-variant text-zinc-900 dark:text-on-surface font-black rounded-full transition-all"
                                 >
-                                    Hire Me
+                                    View Projects
                                 </motion.button>
                             </motion.div>
                             <motion.div 
                                 variants={staggerItem}
                                 className="flex justify-center md:justify-start gap-unit-6 pt-unit-8"
                             >
-                                {['code', 'terminal', 'share'].map((icon) => (
+                                {[
+                                    { icon: 'github', url: 'https://github.com/Kudrot-E-Elahi' },
+                                    { icon: 'linkedin', url: 'https://linkedin.com/in/md-kamrujjaman-al-kudrot' },
+                                    { icon: 'twitter', url: '#' },
+                                    { icon: 'facebook', url: '#' }
+                                ].map((social) => (
                                     <motion.a 
-                                        key={icon}
+                                        key={social.icon}
                                         whileHover={{ y: -5, color: "#4edea3" }}
                                         className="text-zinc-400 dark:text-zinc-500 hover:text-secondary transition-colors" 
-                                        href="#"
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
-                                        <span className="material-symbols-outlined text-3xl">{icon}</span>
+                                        <i className={`fa-brands fa-${social.icon} text-2xl`}></i>
+                                        {/* Fallback to material symbols if font-awesome is not loaded */}
+                                        <span className="sr-only">{social.icon}</span>
                                     </motion.a>
                                 ))}
                             </motion.div>

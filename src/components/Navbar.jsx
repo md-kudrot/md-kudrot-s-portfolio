@@ -21,13 +21,13 @@ const Navbar = () => {
                         whileHover={{ scale: 1.05 }}
                         className="text-2xl font-black text-zinc-900 dark:text-white tracking-tighter uppercase font-sans antialiased tracking-tight cursor-pointer"
                     >
-                        DEV.KUDROT
+                        MD.KUDROT
                     </motion.div>
                 </Link>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center space-x-10">
-                    {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                    {['Home', 'About', 'Skills', 'Education',  'Projects', 'Contact'].map((item) => (
                         <motion.a 
                             key={item}
                             whileHover={{ y: -2, color: "#4edea3" }}

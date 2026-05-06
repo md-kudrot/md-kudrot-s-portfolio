@@ -69,22 +69,40 @@ const Skills = () => {
                             <p className="text-zinc-600 dark:text-on-surface-variant mt-unit-2 text-lg">The tools I use to bring ideas to life.</p>
                         </motion.div>
 
-                        <div className="grid md:grid-cols-2 gap-unit-16">
+                        <div className="grid md:grid-cols-3 gap-unit-8">
                             {/* Frontend */}
                             <motion.div 
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={viewPortConfig}
                                 variants={staggerContainer}
-                                className="glass-card p-unit-10 rounded-3xl shadow-sm hover:shadow-xl transition-all"
+                                className="glass-card p-unit-8 rounded-3xl shadow-sm hover:shadow-xl transition-all"
                             >
-                                <h3 className="font-h3 text-2xl text-zinc-900 dark:text-white mb-unit-8 flex items-center gap-unit-3">
+                                <h3 className="font-h3 text-xl text-zinc-900 dark:text-white mb-unit-8 flex items-center gap-unit-3">
                                     <span className="material-symbols-outlined text-secondary text-3xl">window</span> Frontend
                                 </h3>
-                                <div className="space-y-unit-8">
+                                <div className="space-y-unit-6">
                                     <SkillBar name="React" percent={95} color="#4edea3" />
-                                    <SkillBar name="Vue" percent={80} color="#4edea3" />
-                                    <SkillBar name="Tailwind CSS" percent={90} color="#4edea3" />
+                                    <SkillBar name="Next.js" percent={90} color="#4edea3" />
+                                    <SkillBar name="Tailwind CSS" percent={95} color="#4edea3" />
+                                </div>
+                            </motion.div>
+
+                            {/* Backend */}
+                            <motion.div 
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={viewPortConfig}
+                                variants={staggerContainer}
+                                className="glass-card p-unit-8 rounded-3xl shadow-sm hover:shadow-xl transition-all"
+                            >
+                                <h3 className="font-h3 text-xl text-zinc-900 dark:text-white mb-unit-8 flex items-center gap-unit-3">
+                                    <span className="material-symbols-outlined text-primary text-3xl">database</span> Backend
+                                </h3>
+                                <div className="space-y-unit-6">
+                                    <SkillBar name="Node.js" percent={85} color="#00dbe9" />
+                                    <SkillBar name="Express" percent={80} color="#00dbe9" />
+                                    <SkillBar name="MongoDB" percent={85} color="#00dbe9" />
                                 </div>
                             </motion.div>
 
@@ -94,15 +112,15 @@ const Skills = () => {
                                 whileInView="animate"
                                 viewport={viewPortConfig}
                                 variants={staggerContainer}
-                                className="glass-card p-unit-10 rounded-3xl shadow-sm hover:shadow-xl transition-all"
+                                className="glass-card p-unit-8 rounded-3xl shadow-sm hover:shadow-xl transition-all"
                             >
-                                <h3 className="font-h3 text-2xl text-zinc-900 dark:text-white mb-unit-8 flex items-center gap-unit-3">
+                                <h3 className="font-h3 text-xl text-zinc-900 dark:text-white mb-unit-8 flex items-center gap-unit-3">
                                     <span className="material-symbols-outlined text-primary-fixed-dim text-3xl">build</span> Tools
                                 </h3>
-                                <div className="space-y-unit-8">
-                                    <SkillBar name="Git" percent={90} color="#00dbe9" />
-                                    <SkillBar name="Figma" percent={85} color="#00dbe9" />
-                                    <SkillBar name="Webpack" percent={75} color="#00dbe9" />
+                                <div className="space-y-unit-6">
+                                    <SkillBar name="Git & GitHub" percent={90} color="#fed639" />
+                                    <SkillBar name="Figma" percent={85} color="#fed639" />
+                                    <SkillBar name="Postman" percent={85} color="#fed639" />
                                 </div>
                             </motion.div>
                         </div>

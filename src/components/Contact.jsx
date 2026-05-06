@@ -26,7 +26,8 @@ const Contact = () => {
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                 </svg>
             ), 
-            url: 'https://github.com/Kudrot-E-Elahi',
+            url: 'https://github.com/md-kudrot',
+            detail: 'md-kudrot',
             color: 'hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900'
         },
         { 
@@ -36,25 +37,26 @@ const Contact = () => {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.025-3.064-1.867-3.064-1.868 0-2.154 1.459-2.154 2.967v5.701h-3v-11h2.88v1.505h.042c.401-.758 1.379-1.551 2.824-1.551 3.021 0 3.575 1.988 3.575 4.572v6.474z" />
                 </svg>
             ), 
-            url: 'https://linkedin.com/in/md-kamrujjaman-al-kudrot',
+            url: 'https://www.linkedin.com/in/md-kamrujjaman-al-kudrot/',
+            detail: 'MD Kamrujjaman',
             color: 'hover:bg-[#0077b5] hover:text-white'
         },
         { 
-            name: 'Facebook', 
+            name: 'WhatsApp', 
             icon: (
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
+                <i className="fa-brands fa-whatsapp text-2xl"></i>
             ), 
-            url: '#',
-            color: 'hover:bg-[#1877f2] hover:text-white'
+            url: 'https://wa.me/+8801315984904',
+            detail: '+880 1315 984904',
+            color: 'hover:bg-[#25d366] hover:text-white'
         },
         { 
             name: 'Email', 
             icon: (
                 <span className="material-symbols-outlined text-2xl">mail</span>
             ), 
-            url: 'mailto:kamrujjaman.kudrot@gmail.com',
+            url: 'mailto:mdkurot592@gmail.com',
+            detail: 'mdkudrot592@gmail.com',
             color: 'hover:bg-secondary hover:text-on-secondary'
         },
     ];
@@ -179,7 +181,7 @@ const Contact = () => {
                                                     </div>
                                                     <div className="flex flex-col">
                                                         <span className="text-sm font-black uppercase tracking-widest opacity-60">{social.name}</span>
-                                                        <span className="text-xs font-bold truncate max-w-[120px]">Let's connect</span>
+                                                        <span className="text-xs font-bold truncate max-w-[120px]">{social.detail}</span>
                                                     </div>
                                                 </motion.a>
                                             ))}
