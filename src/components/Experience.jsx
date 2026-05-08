@@ -20,18 +20,18 @@ const Experience = () => {
 
     const experienceData = [
         {
-            role: "Frontend Developer (Freelance)",
-            company: "Self-Employed",
-            duration: "2023 - Present",
-            description: "Building high-performance, accessible, and visually stunning web experiences using React, Next.js, and Tailwind CSS. Collaborating with international clients to deliver production-grade applications.",
-            skills: ["React", "Next.js", "Tailwind", "Framer Motion"]
+            role: "Executive Member (5th Executive Committee)",
+            company: "CNPI Community of Computer Science & Technology",
+            duration: "Present",
+            description: "I’m incredibly grateful for the opportunity to be part of this amazing community of passionate learners and future tech professionals. Shaping skills, leadership, and collaboration.",
+            skills: ["Leadership", "Community", "Collaboration"]
         },
         {
-            role: "Currently Seeking Opportunities",
-            company: "Open for Full-time Roles",
-            duration: "Present",
-            description: "Actively looking for a challenging role in a forward-thinking company where I can apply my skills in UI/UX architecture and modern frontend development.",
-            skills: ["Remote", "Hybrid", "On-site"]
+            role: "Independent Project Developer",
+            company: "Self-Project Showcase",
+            duration: "2023 - Present",
+            description: "Built and deployed multiple hands-on projects to strengthen DOM, async JavaScript, and real-world UI logic. Focused on production-ready patterns and UI consistency.",
+            skills: ["JavaScript", "React.js", "Tailwind CSS", "UI Logic"]
         }
     ];
 

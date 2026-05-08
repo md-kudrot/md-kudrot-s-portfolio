@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="max-w-[1280px] mx-auto px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     <div className="flex flex-col items-center md:items-start">
-                        <div className="text-3xl font-black text-white uppercase tracking-tighter mb-6">DEV.KUDROT</div>
+                        <div className="text-3xl font-black text-white uppercase tracking-tighter mb-6">MD.KUDROT</div>
                         <p className="text-zinc-500 font-bold leading-relaxed max-w-xs text-center md:text-left">
                             Building high-performance, accessible, and visually stunning web experiences.
                         </p>
@@ -35,9 +35,9 @@ const Footer = () => {
                         <h4 className="text-white font-black mb-6 uppercase tracking-[0.2em] text-[10px]">Connect</h4>
                         <div className="flex gap-6">
                             {[
-                                { icon: 'github', url: 'https://github.com/Kudrot-E-Elahi' },
+                                { icon: 'github', url: 'https://github.com/md-kudrot' },
                                 { icon: 'linkedin', url: 'https://linkedin.com/in/md-kamrujjaman-al-kudrot' },
-                                { icon: 'twitter', url: '#' }
+                                { icon: 'whatsapp', url: 'https://wa.me/+8801315984904' }
                             ].map((social) => (
                                 <motion.a
                                     key={social.icon}

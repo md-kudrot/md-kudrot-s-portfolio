@@ -32,7 +32,7 @@ const Projects = () => {
         if (isVisible) {
             const timer = setTimeout(() => {
                 fetchProjects();
-            }, 1200);
+            }, 100);
             return () => clearTimeout(timer);
         }
     }, [isVisible]);

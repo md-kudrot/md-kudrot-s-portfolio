@@ -46,13 +46,13 @@ const About = () => {
                             <div>
                                 <h2 className="font-h2 text-3xl md:text-5xl text-zinc-900 dark:text-white mb-unit-6">About Me</h2>
                                 <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
-                                    My journey into the world of programming began with a curiosity about how things work under the hood. What started as a hobby of tweaking HTML and CSS quickly evolved into a passion for building complex, scalable web applications.
+                                    I’m MD Kamrujjaman Al Kudrot — a Frontend Developer focused on building clean, responsive, and user-centric web interfaces. I turn ideas into fast, interactive experiences using JavaScript, React.js, and Tailwind CSS—with code that’s readable, scalable, and team-friendly.
                                 </p>
                                 <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
-                                    I truly enjoy the process of turning a design concept into a pixel-perfect, interactive reality. There's a unique satisfaction in solving complex logic problems and optimizing performance to ensure a seamless user experience. I specialize in the React ecosystem, leveraging modern tools to build UI systems that are not only beautiful but also accessible and efficient.
+                                    I genuinely enjoy solving real UI problems and shipping features people actually use. I’m a daily learner who improves by building, breaking, and refining real projects. My focus is on creating production-ready patterns and maintaining UI consistency.
                                 </p>
                                 <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
-                                    Outside of the world of code, I'm an avid learner and explorer. You'll often find me reading about emerging technologies, experimenting with UI designs in Figma, or contributing to open-source projects. I also enjoy traveling, photography, and gaming, which help me stay creative and energized. I'm a lifelong student of design and technology, always looking for the next challenge to tackle.
+                                    Currently, I'm growing into a strong React.js developer and moving toward the MERN Stack. I'm deeply interested in frontend performance and building scalable applications that provide a seamless user experience.
                                 </p>
                             </div>
                             <div className="grid grid-cols-2 gap-unit-6">
@@ -60,15 +60,15 @@ const About = () => {
                                     whileHover={{ y: -10, borderColor: "#4edea3" }}
                                     className="glass-card p-unit-8 rounded-3xl text-center border-transparent transition-all shadow-sm hover:shadow-xl"
                                 >
-                                    <div className="text-4xl font-bold text-secondary mb-1">5+</div>
-                                    <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 dark:text-on-surface-variant">Years Experience</div>
+                                    <div className="text-2xl font-bold text-secondary mb-1">Daily</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 dark:text-on-surface-variant">Learner</div>
                                 </motion.div>
                                 <motion.div 
                                     whileHover={{ y: -10, borderColor: "#00dbe9" }}
                                     className="glass-card p-unit-8 rounded-3xl text-center border-transparent transition-all shadow-sm hover:shadow-xl"
                                 >
-                                    <div className="text-4xl font-bold text-primary-fixed-dim mb-1">50+</div>
-                                    <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 dark:text-on-surface-variant">Projects Done</div>
+                                    <div className="text-2xl font-bold text-primary-fixed-dim mb-1">Project</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 dark:text-on-surface-variant">Focused</div>
                                 </motion.div>
                             </div>
                         </motion.div>
@@ -77,8 +77,8 @@ const About = () => {
                             <h3 className="font-h3 text-2xl text-zinc-900 dark:text-white">Qualification</h3>
                             <div className="space-y-unit-10 relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[2px] before:bg-zinc-200 dark:before:bg-outline-variant pl-unit-10">
                                 {[
-                                    { title: "B.S. in Computer Science", detail: "Stanford University | 2018-2022", color: "#4edea3" },
-                                    { title: "Full-Stack Web Development", detail: "Meta Certification | 2023", color: "#00dbe9" }
+                                    { title: "Computer Science and Technology", detail: "Chapainawabganj polytechnic institute | 2023 - 2027", color: "#4edea3" },
+                                    { title: "Secondary School Certificate (SSC)", detail: "HR Residential Model School and College | 2022 - 2023", color: "#00dbe9" }
                                 ].map((item, idx) => (
                                     <motion.div 
                                         key={idx}

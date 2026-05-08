@@ -20,22 +20,16 @@ const Education = () => {
 
     const educationData = [
         {
-            degree: "Bachelor of Science in Computer Science",
-            institution: "Dhaka International University",
-            year: "2021 - 2025 (Expected)",
-            result: "CGPA: 3.85 / 4.00"
-        },
-        {
-            degree: "Higher Secondary Certificate (HSC)",
-            institution: "Govt. Science College, Dhaka",
-            year: "2018 - 2020",
-            result: "GPA: 5.00 / 5.00"
+            degree: "Computer Science and Technology",
+            institution: "Chapainawabganj polytechnic institute",
+            year: "Jan 2023 – Jan 2027",
+            result: "Currently Studying"
         },
         {
             degree: "Secondary School Certificate (SSC)",
-            institution: "Ideal School and College, Motijheel",
-            year: "2016 - 2018",
-            result: "GPA: 5.00 / 5.00"
+            institution: "HR Residential Model School and College",
+            year: "2022 - 2023",
+            result: "Science"
         }
     ];
 

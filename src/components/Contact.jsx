@@ -37,7 +37,7 @@ const Contact = () => {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.025-3.064-1.867-3.064-1.868 0-2.154 1.459-2.154 2.967v5.701h-3v-11h2.88v1.505h.042c.401-.758 1.379-1.551 2.824-1.551 3.021 0 3.575 1.988 3.575 4.572v6.474z" />
                 </svg>
             ), 
-            url: 'https://www.linkedin.com/in/md-kamrujjaman-al-kudrot/',
+            url: 'https://linkedin.com/in/md-kamrujjaman-al-kudrot',
             detail: 'MD Kamrujjaman',
             color: 'hover:bg-[#0077b5] hover:text-white'
         },
@@ -55,8 +55,8 @@ const Contact = () => {
             icon: (
                 <span className="material-symbols-outlined text-2xl">mail</span>
             ), 
-            url: 'mailto:mdkurot592@gmail.com',
-            detail: 'mdkudrot592@gmail.com',
+            url: 'mailto:kudrot593@gmail.com',
+            detail: 'kudrot593@gmail.com',
             color: 'hover:bg-secondary hover:text-on-secondary'
         },
     ];

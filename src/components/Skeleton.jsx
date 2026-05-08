@@ -74,3 +74,17 @@ export const SectionSkeleton = () => (
         </div>
     </div>
 );
+
+export const SkillsSkeleton = () => (
+    <div className="max-w-[1280px] mx-auto px-8 space-y-12">
+        <SectionTitleSkeleton />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[...Array(10)].map((_, i) => (
+                <div key={i} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-zinc-100 dark:border-white/5 space-y-4">
+                    <Skeleton className="h-12 w-12 rounded-xl mx-auto" />
+                    <Skeleton className="h-4 w-20 mx-auto" />
+                </div>
+            ))}
+        </div>
+    </div>
+);

@@ -7,7 +7,7 @@ import { HeroSkeleton } from './Skeleton';
 import { useSkeleton } from '@/hooks/useSkeleton';
 
 const Hero = () => {
-    const isLoading = useSkeleton(1000); // Hero gets a slightly longer initial delay
+    const isLoading = useSkeleton(500); // Hero gets a slightly longer initial delay
 
     return (
         <section className="pt-unit-24 pb-unit-16 px-8 min-h-screen flex items-center overflow-hidden bg-white dark:bg-background transition-colors duration-300" id="home">
@@ -35,19 +35,19 @@ const Hero = () => {
                                 variants={staggerItem}
                                 className="text-secondary font-label-caps tracking-widest text-label-caps uppercase inline-block font-bold"
                             >
-                                FRONTEND DEVELOPER & UI ARCHITECT
+                                FRONT-END DEVELOPER
                             </motion.span>
                             <motion.h1 
                                 variants={staggerItem}
                                 className="font-h1 text-4xl md:text-7xl text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
                             >
-                                MD Kamrujjaman Al Kudrot
+                                Md Kamrujjaman Al Kudrot
                             </motion.h1>
                             <motion.p 
                                 variants={staggerItem}
                                 className="font-body-lg text-lg md:text-xl text-zinc-600 dark:text-on-surface-variant max-w-xl mx-auto md:mx-0"
                             >
-                                I build high-performance, accessible, and visually stunning web experiences using modern technologies.
+                                I build clean, responsive, and user-centric web interfaces using JavaScript, React.js, and Tailwind CSS.
                             </motion.p>
                             <motion.div 
                                 variants={staggerItem}
@@ -75,10 +75,9 @@ const Hero = () => {
                                 className="flex justify-center md:justify-start gap-unit-6 pt-unit-8"
                             >
                                 {[
-                                    { icon: 'github', url: 'https://github.com/Kudrot-E-Elahi' },
+                                    { icon: 'github', url: 'https://github.com/md-kudrot' },
                                     { icon: 'linkedin', url: 'https://linkedin.com/in/md-kamrujjaman-al-kudrot' },
-                                    { icon: 'twitter', url: '#' },
-                                    { icon: 'facebook', url: '#' }
+                                    { icon: 'whatsapp', url: 'https://wa.me/+8801315984904' },
                                 ].map((social) => (
                                     <motion.a 
                                         key={social.icon}
