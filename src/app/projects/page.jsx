@@ -42,7 +42,7 @@ const AllProjectsPage = () => {
     }, [activeCategory, allProjects]);
 
     return (
-        <main className="min-h-screen bg-zinc-50 dark:bg-background transition-colors duration-300 pt-32 pb-20 px-4 md:px-8">
+        <main className="min-h-screen transition-colors duration-300 pt-32 pb-20 px-4 md:px-8">
             <div className="max-w-[1280px] mx-auto">
                 <motion.div 
                     initial="initial"
@@ -52,7 +52,7 @@ const AllProjectsPage = () => {
                 >
                     <Link 
                         href="/#projects" 
-                        className="inline-flex items-center gap-2 text-zinc-500 hover:text-secondary transition-colors font-bold uppercase text-xs tracking-widest mb-6 group"
+                        className="inline-flex items-center gap-2 text-zinc-500 hover:text-primary transition-colors font-semibold uppercase text-xs tracking-widest mb-6 group"
                     >
                         <motion.span 
                             whileHover={{ x: -5 }}
@@ -62,10 +62,10 @@ const AllProjectsPage = () => {
                         </motion.span> 
                         Back
                     </Link>
-                    <h1 className="font-h2 text-4xl md:text-6xl text-zinc-900 dark:text-white mb-6">All Projects</h1>
-                    <p className="text-zinc-600 dark:text-on-surface-variant text-xl max-w-3xl">
+                    <h1 className="font-h2 text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mb-6">All Projects</h1>
+                    <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-3xl leading-relaxed">
                         A comprehensive showcase of my journey through code, design, and problem-solving. 
-                        Explore everything from experimental prototypes to full-scale enterprise applications.
+                        Explore everything from experimental prototypes to full-scale applications.
                     </p>
                 </motion.div>
 

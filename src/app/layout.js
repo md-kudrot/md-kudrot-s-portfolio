@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="bg-background text-foreground font-body-base antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+      <body suppressHydrationWarning className={`${inter.variable} bg-background text-foreground font-body-base antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden`}>
         <ThemeProvider>
           <SmoothScroll>
             <ScrollProgress />

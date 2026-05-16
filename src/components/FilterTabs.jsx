@@ -12,22 +12,22 @@ const FilterTabs = ({ activeCategory, onCategoryChange }) => {
     ];
 
     return (
-        <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-12">
+        <div className="flex flex-nowrap md:flex-wrap overflow-x-auto md:overflow-visible justify-start gap-4 mb-12 pb-4 md:pb-0 no-scrollbar">
             {categories.map((category) => (
                 <button
                     key={category.id}
                     onClick={() => onCategoryChange(category.id)}
-                    className={`relative px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
+                    className={`relative px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-500 ${
                         activeCategory === category.id
-                            ? 'text-on-secondary'
-                            : 'text-zinc-600 dark:text-on-surface-variant hover:bg-zinc-200 dark:hover:bg-white/5'
+                            ? 'text-zinc-900'
+                            : 'text-zinc-500 dark:text-slate-400 bg-white/5 hover:bg-white/10 hover:text-white'
                     }`}
                 >
                     {activeCategory === category.id && (
                         <motion.div
                             layoutId="active-pill"
-                            className="absolute inset-0 bg-secondary rounded-full shadow-lg"
-                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                            className="absolute inset-0 bg-white rounded-full shadow-2xl"
+                            transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
                         />
                     )}
                     <span className="relative z-10">{category.label}</span>

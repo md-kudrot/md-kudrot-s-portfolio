@@ -19,7 +19,7 @@ const About = () => {
     }, [isVisible]);
 
     return (
-        <section className="py-unit-24 px-8 bg-zinc-50 dark:bg-surface-container-lowest transition-colors duration-300" id="about">
+        <section className="py-32 px-8 bg-transparent transition-colors duration-300" id="about">
             <AnimatePresence mode="wait">
                 {isLoading ? (
                     <motion.div 
@@ -31,6 +31,7 @@ const About = () => {
                         }}
                         exit={{ opacity: 0 }}
                         viewport={viewPortConfig}
+                        className="w-full"
                     >
                         <SectionSkeleton />
                     </motion.div>
@@ -40,45 +41,42 @@ const About = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={viewPortConfig}
-                        className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-unit-24 items-center"
+                        className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-24 items-center"
                     >
-                        <motion.div variants={fadeUp} className="space-y-unit-8">
+                        <motion.div variants={fadeUp} className="space-y-12">
                             <div>
-                                <h2 className="font-h2 text-3xl md:text-5xl text-zinc-900 dark:text-white mb-unit-6">About Me</h2>
-                                <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
+                                <h2 className="text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mb-8">About.</h2>
+                                <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
                                     I’m MD Kamrujjaman Al Kudrot — a Frontend Developer focused on building clean, responsive, and user-centric web interfaces. I turn ideas into fast, interactive experiences using JavaScript, React.js, and Tailwind CSS—with code that’s readable, scalable, and team-friendly.
                                 </p>
-                                <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
-                                    I genuinely enjoy solving real UI problems and shipping features people actually use. I’m a daily learner who improves by building, breaking, and refining real projects. My focus is on creating production-ready patterns and maintaining UI consistency.
-                                </p>
-                                <p className="font-body-lg text-lg text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
-                                    Currently, I'm growing into a strong React.js developer and moving toward the MERN Stack. I'm deeply interested in frontend performance and building scalable applications that provide a seamless user experience.
+                                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                                    I genuinely enjoy solving real UI problems and shipping features people actually use. I’m a daily learner who improves by building, breaking, and refining real projects.
                                 </p>
                             </div>
-                            <div className="grid grid-cols-2 gap-unit-6">
+                            <div className="grid grid-cols-2 gap-6">
                                 <motion.div 
-                                    whileHover={{ y: -10, borderColor: "#4edea3" }}
-                                    className="glass-card p-unit-8 rounded-3xl text-center border-transparent transition-all shadow-sm hover:shadow-xl"
+                                    whileHover={{ y: -5 }}
+                                    className="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-3xl text-center border border-white/5 transition-all shadow-2xl"
                                 >
-                                    <div className="text-2xl font-bold text-secondary mb-1">Daily</div>
-                                    <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 dark:text-on-surface-variant">Learner</div>
+                                    <div className="text-2xl font-bold text-primary mb-1">Daily</div>
+                                    <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">Learner</div>
                                 </motion.div>
                                 <motion.div 
-                                    whileHover={{ y: -10, borderColor: "#00dbe9" }}
-                                    className="glass-card p-unit-8 rounded-3xl text-center border-transparent transition-all shadow-sm hover:shadow-xl"
+                                    whileHover={{ y: -5 }}
+                                    className="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-3xl text-center border border-white/5 transition-all shadow-2xl"
                                 >
-                                    <div className="text-2xl font-bold text-primary-fixed-dim mb-1">Project</div>
-                                    <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 dark:text-on-surface-variant">Focused</div>
+                                    <div className="text-2xl font-bold text-secondary mb-1">Project</div>
+                                    <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">Focused</div>
                                 </motion.div>
                             </div>
                         </motion.div>
                         
-                        <motion.div variants={fadeUp} className="space-y-unit-8">
-                            <h3 className="font-h3 text-2xl text-zinc-900 dark:text-white">Qualification</h3>
-                            <div className="space-y-unit-10 relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[2px] before:bg-zinc-200 dark:before:bg-outline-variant pl-unit-10">
+                        <motion.div variants={fadeUp} className="space-y-10">
+                            <h3 className="text-2xl font-bold text-white">Qualification</h3>
+                            <div className="space-y-10 relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[1px] before:bg-white/10 pl-10">
                                 {[
-                                    { title: "Computer Science and Technology", detail: "Chapainawabganj polytechnic institute | 2023 - 2027", color: "#4edea3" },
-                                    { title: "Secondary School Certificate (SSC)", detail: "HR Residential Model School and College | 2022 - 2023", color: "#00dbe9" }
+                                    { title: "Computer Science and Technology", detail: "Chapainawabganj polytechnic institute | 2023 - 2027", color: "var(--color-primary)" },
+                                    { title: "Secondary School Certificate (SSC)", detail: "HR Residential Model School and College | 2022 - 2023", color: "var(--color-secondary)" }
                                 ].map((item, idx) => (
                                     <motion.div 
                                         key={idx}
@@ -89,11 +87,11 @@ const About = () => {
                                         className="relative"
                                     >
                                         <div 
-                                            className="absolute -left-[45px] top-1.5 w-5 h-5 rounded-full border-4 border-white dark:border-zinc-900 shadow-lg"
+                                            className="absolute -left-[44.5px] top-1.5 w-3 h-3 rounded-full border-2 border-[#0b1120] shadow-lg"
                                             style={{ backgroundColor: item.color }}
                                         ></div>
-                                        <h4 className="font-h3 text-xl font-bold text-zinc-900 dark:text-white mb-1">{item.title}</h4>
-                                        <p className="font-bold text-sm" style={{ color: item.color }}>{item.detail}</p>
+                                        <h4 className="text-xl font-bold text-white mb-1">{item.title}</h4>
+                                        <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: item.color }}>{item.detail}</p>
                                     </motion.div>
                                 ))}
                             </div>

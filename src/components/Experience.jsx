@@ -36,8 +36,20 @@ const Experience = () => {
     ];
 
     return (
-        <section className="py-unit-24 px-8 bg-white dark:bg-background transition-colors duration-300" id="experience">
+        <section className="py-32 px-8 bg-transparent transition-colors duration-300" id="experience">
             <div className="max-w-[1280px] mx-auto">
+                <motion.div 
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={viewPortConfig}
+                    variants={fadeUp}
+                    className="text-center mb-24"
+                >
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mb-6">Journey.</h2>
+                    <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                        My career path and professional milestones in the tech industry.
+                    </p>
+                </motion.div>
                 <AnimatePresence mode="wait">
                     {isLoading ? (
                         <motion.div 
@@ -60,49 +72,48 @@ const Experience = () => {
                             viewport={viewPortConfig}
                             variants={staggerContainer}
                         >
-                            <motion.div variants={fadeUp} className="text-center mb-16">
-                                <h2 className="font-h2 text-3xl md:text-5xl text-zinc-900 dark:text-white mb-4">Professional Experience</h2>
-                                <p className="text-zinc-600 dark:text-on-surface-variant text-lg">My career path and professional milestones.</p>
-                            </motion.div>
-
-                            <div className="space-y-8 max-w-4xl mx-auto">
+                            <div className="space-y-12 max-w-4xl mx-auto">
                                 {experienceData.map((exp, idx) => (
                                     <motion.div 
                                         key={idx}
                                         variants={staggerItem}
-                                        className="relative pl-8 md:pl-0"
+                                        className="relative"
                                     >
-                                        <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-zinc-200 dark:bg-white/10"></div>
-                                        
-                                        <div className={`flex flex-col md:flex-row items-center gap-8 ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                                            <div className="flex-1 w-full">
+                                        <div className={`flex flex-col md:flex-row items-start gap-12`}>
+                                            <div className="md:w-32 pt-2 shrink-0">
+                                                <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">{exp.duration}</span>
+                                            </div>
+                                            
+                                            <div className="flex-grow">
                                                 <motion.div 
-                                                    whileHover={{ x: idx % 2 === 0 ? 10 : -10 }}
-                                                    className={`glass-card p-8 rounded-3xl border-zinc-100 dark:border-white/5 shadow-sm hover:shadow-xl transition-all ${idx % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}
+                                                    whileHover={{ x: 5 }}
+                                                    className="bg-zinc-900/30 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/5 shadow-2xl transition-all"
                                                 >
-                                                    <span className="text-xs font-black text-secondary uppercase tracking-[0.2em] mb-2 block">{exp.duration}</span>
-                                                    <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">{exp.role}</h3>
-                                                    <p className="text-zinc-500 font-bold uppercase text-[10px] tracking-widest mb-4">{exp.company}</p>
-                                                    <p className="text-zinc-600 dark:text-on-surface-variant leading-relaxed mb-6">
+                                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                                        <div>
+                                                            <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
+                                                            <p className="text-slate-500 font-semibold uppercase text-[10px] tracking-[0.2em]">{exp.company}</p>
+                                                        </div>
+                                                        <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                                            <span className="material-symbols-outlined text-2xl">
+                                                                {exp.role.includes("Seeking") ? "person_search" : "work"}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <p className="text-slate-400 leading-relaxed mb-8 text-sm">
                                                         {exp.description}
                                                     </p>
-                                                    <div className={`flex flex-wrap gap-2 ${idx % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                                                    
+                                                    <div className="flex flex-wrap gap-2">
                                                         {exp.skills.map((skill, sIdx) => (
-                                                            <span key={sIdx} className="px-3 py-1 bg-zinc-100 dark:bg-white/5 text-zinc-500 dark:text-zinc-400 text-[10px] font-black rounded-full uppercase tracking-widest border border-zinc-200 dark:border-white/10">
+                                                            <span key={sIdx} className="px-4 py-1.5 bg-white/5 text-slate-400 text-[10px] font-bold rounded-full uppercase tracking-widest border border-white/5">
                                                                 {skill}
                                                             </span>
                                                         ))}
                                                     </div>
                                                 </motion.div>
                                             </div>
-                                            
-                                            <div className="relative z-10 w-12 h-12 rounded-full bg-secondary shadow-lg shadow-secondary/20 flex items-center justify-center border-4 border-white dark:border-zinc-900 shrink-0">
-                                                <span className="material-symbols-outlined text-white text-xl">
-                                                    {exp.role.includes("Seeking") ? "person_search" : "work"}
-                                                </span>
-                                            </div>
-                                            
-                                            <div className="flex-1 hidden md:block"></div>
                                         </div>
                                     </motion.div>
                                 ))}

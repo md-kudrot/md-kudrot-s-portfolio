@@ -49,7 +49,7 @@ const Projects = () => {
     }, [activeCategory, allProjects]);
 
     return (
-        <section className="py-20 px-4 md:px-8 bg-zinc-50 dark:bg-surface-container-low transition-colors duration-300" id="projects">
+        <section className="py-32 px-4 md:px-8 bg-transparent transition-colors duration-300" id="projects">
             <div className="max-w-[1280px] mx-auto">
                 <motion.div 
                     initial="initial"
@@ -62,12 +62,14 @@ const Projects = () => {
                     className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 text-center md:text-left gap-6"
                 >
                     <div className="max-w-2xl">
-                        <h2 className="font-h2 text-3xl md:text-5xl text-zinc-900 dark:text-white mb-4">Featured Projects</h2>
-                        <p className="text-zinc-600 dark:text-on-surface-variant text-lg">Selected works from my portfolio that demonstrate my expertise in frontend development and UI architecture.</p>
+                        <h2 className="font-h2 text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mb-6">Works.</h2>
+                        <p className="text-slate-500 dark:text-slate-400 text-lg max-w-xl leading-relaxed">
+                            A showcase of my recent projects, featuring full-stack applications and high-performance frontend interfaces.
+                        </p>
                     </div>
                     <Link 
                         href="/projects"
-                        className="hidden md:flex text-secondary font-bold hover:underline items-center gap-2 text-lg whitespace-nowrap group"
+                        className="hidden md:flex text-primary font-bold hover:underline items-center gap-2 text-lg whitespace-nowrap group"
                     >
                         View All Projects 
                         <motion.span 
@@ -116,18 +118,18 @@ const Projects = () => {
                 {!isLoading && hasMore && (
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="mt-16 flex justify-center"
+                        viewport={viewPortConfig}
+                        className="mt-20 flex justify-center"
                     >
                         <Link 
                             href="/projects"
-                            className="inline-flex items-center gap-3 px-10 py-4 bg-secondary text-on-secondary font-black rounded-xl hover:brightness-110 transition-all shadow-lg active:scale-95 group text-lg"
+                            className="inline-flex items-center gap-4 px-12 py-5 bg-zinc-900 dark:bg-white text-white dark:text-black font-bold text-xs uppercase tracking-widest rounded-full hover:scale-105 transition-all shadow-2xl group"
                         >
-                            See More Projects
+                            Explore All Projects
                             <motion.span 
-                                className="material-symbols-outlined"
-                                initial={{ x: 0 }}
+                                className="material-symbols-outlined text-lg"
                                 whileHover={{ x: 5 }}
                             >
                                 arrow_forward

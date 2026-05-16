@@ -2,15 +2,15 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { scaleIn, staggerContainer, staggerItem } from '@/lib/animations';
+import { fadeUp, staggerContainer, staggerItem } from '@/lib/animations';
 import { HeroSkeleton } from './Skeleton';
 import { useSkeleton } from '@/hooks/useSkeleton';
 
 const Hero = () => {
-    const isLoading = useSkeleton(500); // Hero gets a slightly longer initial delay
+    const isLoading = useSkeleton(600);
 
     return (
-        <section className="pt-unit-24 pb-unit-16 px-8 min-h-screen flex items-center overflow-hidden bg-white dark:bg-background transition-colors duration-300" id="home">
+        <section className="relative pt-32 pb-20 px-8 min-h-screen flex items-center overflow-hidden transition-colors duration-300" id="home">
             <AnimatePresence mode="wait">
                 {isLoading ? (
                     <motion.div 
@@ -28,51 +28,61 @@ const Hero = () => {
                         variants={staggerContainer}
                         initial="initial"
                         animate="animate"
-                        className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-unit-16 items-center"
+                        className="max-w-[1280px] mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10"
                     >
-                        <div className="space-y-unit-6 text-center md:text-left">
-                            <motion.span 
+                        <div className="space-y-8 text-center md:text-left">
+                            <motion.div 
                                 variants={staggerItem}
-                                className="text-secondary font-label-caps tracking-widest text-label-caps uppercase inline-block font-bold"
+                                className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
                             >
-                                FRONT-END DEVELOPER
-                            </motion.span>
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                                </span>
+                                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Available for new projects</span>
+                            </motion.div>
+
                             <motion.h1 
                                 variants={staggerItem}
-                                className="font-h1 text-4xl md:text-7xl text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
+                                className="text-5xl md:text-7xl font-extrabold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
                             >
-                                Md Kamrujjaman Al Kudrot
+                                Building digital <br />
+                                <span className="text-gradient-primary">experiences.</span>
                             </motion.h1>
+
                             <motion.p 
                                 variants={staggerItem}
-                                className="font-body-lg text-lg md:text-xl text-zinc-600 dark:text-on-surface-variant max-w-xl mx-auto md:mx-0"
+                                className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl mx-auto md:mx-0 leading-relaxed font-medium"
                             >
-                                I build clean, responsive, and user-centric web interfaces using JavaScript, React.js, and Tailwind CSS.
+                                I’m MD Kamrujjaman Al Kudrot — a Frontend Developer focused on building clean, responsive, and user-centric web interfaces that drive results.
                             </motion.p>
+
                             <motion.div 
                                 variants={staggerItem}
-                                className="flex flex-wrap justify-center md:justify-start gap-unit-4 pt-unit-4"
+                                className="flex flex-col sm:flex-row justify-center md:justify-start gap-5 pt-4"
                             >
                                 <motion.button 
-                                    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 240, 255, 0.3)" }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() => window.open('#', '_blank')}
-                                    className="px-unit-8 py-unit-4 bg-primary-container text-on-primary-container font-black rounded-full hover:brightness-110 transition-all shadow-lg flex items-center gap-2"
+                                    whileHover={{ scale: 1.02, y: -2 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="px-10 py-5 bg-zinc-900 dark:bg-white text-white dark:text-black font-bold text-xs uppercase tracking-widest rounded-full shadow-2xl flex items-center justify-center gap-3 transition-all"
                                 >
-                                    Download Resume <span className="material-symbols-outlined">download</span>
+                                    Download CV
+                                    <span className="material-symbols-outlined text-lg">download</span>
                                 </motion.button>
+                                
                                 <motion.button 
-                                    whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.05)" }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
-                                    className="px-unit-8 py-unit-4 border border-zinc-200 dark:border-outline-variant text-zinc-900 dark:text-on-surface font-black rounded-full transition-all"
+                                    whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="px-10 py-5 bg-transparent border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white font-bold text-xs uppercase tracking-widest rounded-full flex items-center justify-center gap-3 transition-all backdrop-blur-sm"
                                 >
-                                    View Projects
+                                    My Projects
+                                    <span className="material-symbols-outlined text-lg">arrow_outward</span>
                                 </motion.button>
                             </motion.div>
+
                             <motion.div 
                                 variants={staggerItem}
-                                className="flex justify-center md:justify-start gap-unit-6 pt-unit-8"
+                                className="flex items-center justify-center md:justify-start gap-6 pt-8"
                             >
                                 {[
                                     { icon: 'github', url: 'https://github.com/md-kudrot' },
@@ -81,98 +91,71 @@ const Hero = () => {
                                 ].map((social) => (
                                     <motion.a 
                                         key={social.icon}
-                                        whileHover={{ y: -5, color: "#4edea3" }}
-                                        className="text-zinc-400 dark:text-zinc-500 hover:text-secondary transition-colors" 
+                                        whileHover={{ y: -3, color: "var(--color-primary)" }}
+                                        className="text-zinc-400 dark:text-slate-500 transition-all duration-300" 
                                         href={social.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         <i className={`fa-brands fa-${social.icon} text-2xl`}></i>
-                                        {/* Fallback to material symbols if font-awesome is not loaded */}
-                                        <span className="sr-only">{social.icon}</span>
                                     </motion.a>
                                 ))}
                             </motion.div>
                         </div>
 
-                        <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[600px] w-full overflow-visible">
-                            {/* Orbital Arcs Container */}
-                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <motion.div 
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 1.5, ease: "easeOut" }}
-                                    className="relative w-full h-full flex items-center justify-center"
-                                >
-                                    <div className="absolute w-[340px] h-[340px] md:w-[500px] md:h-[500px] border border-dashed border-zinc-200 dark:border-white/10 rounded-full animate-orbit-slow arc-mask z-0"></div>
-                                    <div className="absolute w-[260px] h-[260px] md:w-[380px] md:h-[380px] border border-dashed border-zinc-300 dark:border-white/20 rounded-full animate-orbit-reverse arc-mask z-20"></div>
-                                </motion.div>
+                        <motion.div 
+                            variants={fadeUp}
+                            className="relative flex items-center justify-center"
+                        >
+                            {/* Ambient Background Glows */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/10 rounded-full blur-[120px] -z-10" />
+                            
+                            <div className="relative w-full max-w-[480px] aspect-[4/5] rounded-[2.5rem] overflow-hidden group shadow-2xl border border-white/5 bg-zinc-900/50">
+                                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60 z-10" />
+                                <img 
+                                    src="https://avatars.githubusercontent.com/u/197643931?s=400&v=4" 
+                                    alt="MD Kamrujjaman" 
+                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                
+                                <div className="absolute bottom-8 left-8 right-8 z-20">
+                                    <div className="glass-card p-6 rounded-3xl border-white/10 backdrop-blur-2xl flex items-center justify-between">
+                                        <div>
+                                            <div className="text-2xl font-bold text-white">2+</div>
+                                            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Years of Exp.</div>
+                                        </div>
+                                        <div className="h-10 w-[1px] bg-white/10" />
+                                        <div>
+                                            <div className="text-2xl font-bold text-white">20+</div>
+                                            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Projects Done</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            {/* Central Profile Image */}
+                            {/* Floating Decorative Elements */}
                             <motion.div 
-                                variants={scaleIn}
-                                className="relative z-10"
+                                animate={{ y: [0, -20, 0] }}
+                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute -right-4 top-10 glass-card p-4 rounded-2xl border-white/10 shadow-2xl z-30"
                             >
-                                <motion.div 
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ duration: 0.5 }}
-                                    className="w-40 h-40 md:w-72 md:h-72 rounded-full p-1.5 bg-gradient-to-tr from-primary-container to-secondary shadow-2xl overflow-hidden"
-                                >
-                                    <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-zinc-900 p-1">
-                                        <img 
-                                            alt="MD Kamrujjaman Al Kudrot" 
-                                            className="w-full h-full object-cover rounded-full grayscale-0 hover:grayscale transition-all duration-700 cursor-pointer" 
-                                            src="https://avatars.githubusercontent.com/u/197643931?s=400&u=c8bfe64335ee0c79146721c8b65951e0374a3d52&v=4"
-                                        />
-                                    </div>
-                                </motion.div>
+                                <span className="material-symbols-outlined text-primary text-3xl">terminal</span>
                             </motion.div>
 
-                            {/* Floating Icons */}
-                            <div className="absolute inset-0 z-30 pointer-events-none">
-                                {[
-                                    { icon: 'deployed_code', label: 'REACT', color: '#00dbe9', pos: 'top-[10%] left-[15%]' },
-                                    { icon: 'terminal', label: 'GIT', color: '#4edea3', pos: 'bottom-[15%] left-[5%]', rotate: 15 },
-                                    { icon: 'share', label: 'CONNECT', color: '#fed639', pos: 'top-[20%] right-[10%]', rotate: -10 },
-                                    { icon: 'layers', label: 'UI/UX', color: '#00dbe9', pos: 'bottom-[20%] right-[15%]' },
-                                ].map((item, idx) => (
-                                    <motion.div 
-                                        key={idx}
-                                        initial={{ opacity: 0, y: 50 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 1 + idx * 0.1, duration: 0.8 }}
-                                        className={`absolute ${item.pos} pointer-events-auto`}
-                                    >
-                                        <motion.div 
-                                            animate={{ 
-                                                y: [0, -15, 0],
-                                                rotate: [item.rotate || 0, (item.rotate || 0) + 5, item.rotate || 0]
-                                            }}
-                                            transition={{ 
-                                                duration: 4, 
-                                                repeat: Infinity, 
-                                                ease: "easeInOut",
-                                                delay: idx * 0.5
-                                            }}
-                                            className="glass-card p-3 rounded-2xl border-primary/30 hover:scale-125 transition-all cursor-help group relative shadow-lg"
-                                            style={{ borderColor: `${item.color}44` }}
-                                        >
-                                            <span className="material-symbols-outlined text-3xl" style={{ color: item.color }}>{item.icon}</span>
-                                            <span 
-                                                className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap"
-                                                style={{ color: item.color }}
-                                            >
-                                                {item.label}
-                                            </span>
-                                        </motion.div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
+                            <motion.div 
+                                animate={{ y: [0, 20, 0] }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                className="absolute -left-4 bottom-20 glass-card p-4 rounded-2xl border-white/10 shadow-2xl z-30"
+                            >
+                                <span className="material-symbols-outlined text-secondary text-3xl">brush</span>
+                            </motion.div>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
+            
+            {/* Background Texture Overlay */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] mix-blend-overlay"></div>
         </section>
     );
 };

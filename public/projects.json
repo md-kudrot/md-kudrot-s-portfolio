@@ -34,8 +34,8 @@
       "Implement a robust search and filtering system for the product catalogue.",
       "Add user reviews and rating functionality for products."
     ],
-    "live": "#",
-    "github": "#"
+    "live": "https://sun-cart-tau.vercel.app",
+    "github": "https://github.com/md-kudrot/SunCart"
   },
   {
     "id": "keen-keeper",
@@ -70,8 +70,8 @@
       "Add calendar integration for scheduling follow-ups.",
       "Develop a notes system for detailed interaction logging."
     ],
-    "live": "#",
-    "github": "#"
+    "live": "https://keen-keeper-seven.vercel.app",
+    "github": "https://github.com/md-kudrot/Assignment-07"
   },
   {
     "id": "digitools-platform",
@@ -105,8 +105,8 @@
       "Implement a user dashboard for managing purchased digital downloads.",
       "Add an advanced search and filtering system for large product catalogues."
     ],
-    "live": "#",
-    "github": "#"
+    "live": "https://digitools-platform.vercel.app",
+    "github": "https://github.com/md-kudrot/Assignment-06/tree/main/DigiTools-Platform"
   },
   {
     "id": "github-issues-tracker",
@@ -139,8 +139,8 @@
       "Implement persistent authentication using local storage or cookies.",
       "Add a sorting system for issues by date, priority, or labels."
     ],
-    "live": "#",
-    "github": "#"
+    "live": "https://github-issues-tracker-2112.netlify.app",
+    "github": "https://github.com/md-kudrot/Assignment-05"
   },
   {
     "id": "job-application-tracker",
@@ -172,7 +172,7 @@
       "Implement local storage to persist application data between sessions.",
       "Add a notes feature for each job application card."
     ],
-    "live": "#",
-    "github": "#"
+    "live": "https://md-kudrot.github.io/Assignment-04/src/",
+    "github": "https://github.com/md-kudrot/Assignment-04"
   }
 ]
