@@ -5,6 +5,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DynamicBackground from "@/components/DynamicBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning className={`${inter.variable} bg-background text-foreground font-body-base antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden`}>
         <ThemeProvider>
+          <DynamicBackground />
           <SmoothScroll>
             <ScrollProgress />
             <Navbar />

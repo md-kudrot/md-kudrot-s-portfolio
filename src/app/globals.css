@@ -96,22 +96,21 @@
 :root {
   --color-primary: #3B82F6;
   --color-secondary: #6366F1;
+  /* Light mode default variables */
+  --background: 248 250 252; /* slate-50 */
+  --foreground: 15 23 42; /* slate-900 */
+  --card: 255 255 255;
+}
+
+.dark {
+  /* Dark mode variables */
   --background: 11 17 32;
   --foreground: 248 250 252;
   --card: 17 24 39;
 }
 
-.dark {
-  --background: 11 17 32;
-  --foreground: 248 250 252;
-}
-
 body {
-  background: 
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.10), transparent 35%),
-    linear-gradient(to bottom right, #0B1120, #111827);
-  background-attachment: fixed;
+  background-color: rgb(var(--background));
   color: rgb(var(--foreground));
   min-height: 100vh;
   font-family: var(--font-body-base);

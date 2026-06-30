@@ -12,21 +12,29 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
+        let ticking = false;
+
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-            
-            const sections = ['home', 'about', 'skills', 'education', 'projects', 'contact'];
-            const current = sections.find(section => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    return rect.top >= -100 && rect.top <= 300;
-                }
-                return false;
-            });
-            if (current) setActiveSection(current.charAt(0).toUpperCase() + current.slice(1));
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    setIsScrolled(window.scrollY > 50);
+                    
+                    const sections = ['home', 'about', 'skills', 'education', 'projects', 'contact'];
+                    const current = sections.find(section => {
+                        const element = document.getElementById(section);
+                        if (element) {
+                            const rect = element.getBoundingClientRect();
+                            return rect.top >= -100 && rect.top <= 300;
+                        }
+                        return false;
+                    });
+                    if (current) setActiveSection(current.charAt(0).toUpperCase() + current.slice(1));
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 

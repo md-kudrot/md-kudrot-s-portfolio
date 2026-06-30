@@ -1,5 +1,48 @@
 [
   {
+    "id": "rentify",
+    "title": "Rentify — Property Rental & Booking Platform",
+    "category": "nextjs",
+    "image": "https://github.com/user-attachments/assets/376a90d7-7a1c-4622-b2b8-9b18612a3e0d",
+    "description": "A full-stack luxury property rental and booking platform with role-based dashboards for tenants, owners, and admins.",
+    "fullDescription": "Rentify is a comprehensive property rental solution built with a Next.js frontend and Express.js/MongoDB backend. It offers secure role-based authentication, a complete property listing and booking workflow, and centralized platform moderation. Owners can manage listings and track performance through interactive analytics charts, while tenants can browse, favorite, and book properties with full booking history tracking. The platform maintains a polished dark luxury theme throughout.",
+    "tech": [
+      "Next.js",
+      "Express.js",
+      "MongoDB",
+      "JWT / JWKS",
+      "BetterAuth",
+      "Stripe",
+      "Tailwind CSS",
+      "Recharts",
+      "Framer Motion"
+    ],
+    "contributions": [
+      "Implemented role-based authentication using BetterAuth with dedicated dashboards for tenants, owners, and admins based on permission level.",
+      "Built a complete property management and booking workflow, allowing owners to add/edit listings and tenants to browse, favorite, and book properties with full status tracking.",
+      "Integrated Stripe for a complete one-time payment booking flow, including checkout sessions and MongoDB booking persistence with duplicate prevention.",
+      "Developed centralized admin moderation tools for managing users and properties (update, delete, change roles).",
+      "Created yearly booking history analytics for owners visualized through interactive Recharts charts.",
+      "Secured protected API routes using JWT/JWKS-based token verification middleware.",
+      "Built a standalone ID Checker Tool for cross-referencing large numeric ID databases against uploaded files."
+    ],
+    "challenges": [
+      "Managing role-based access control across multiple dashboard types (tenant/owner/admin).",
+      "Handling Express route ordering conflicts between static and dynamic (/:id) routes.",
+      "Synchronizing JWT/JWKS protected routes with Better Auth session state.",
+      "Configuring CORS with credentials across separate client and server Vercel deployments.",
+      "Resolving Next.js useSearchParams Suspense boundary issues during deployment."
+    ],
+    "improvements": [
+      "Add recurring/subscription-based rental payment options.",
+      "Implement real-time chat between tenants and property owners.",
+      "Expand analytics with occupancy rate and revenue forecasting."
+    ],
+    "live": "https://rentify-beige-rho.vercel.app",
+    "github": "https://github.com/md-kudrot/rentify-client",
+    "githubServer": "https://github.com/md-kudrot/rentify-server"
+  },
+  {
     "id": "sun-cart",
     "title": "SunCart — Modern Responsive eCommerce Platform",
     "category": "nextjs",
