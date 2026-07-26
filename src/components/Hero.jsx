@@ -61,14 +61,16 @@ const Hero = () => {
                                 variants={staggerItem}
                                 className="flex flex-col sm:flex-row justify-center md:justify-start gap-5 pt-4"
                             >
-                                <motion.button 
+                                <motion.a
+                                    href="/MD_Kamrujjaman_Al_Kudrot_Resume.pdf"
+                                    download="MD_Kamrujjaman_Al_Kudrot_Resume.pdf"
                                     whileHover={{ scale: 1.02, y: -2 }}
                                     whileTap={{ scale: 0.98 }}
                                     className="px-10 py-5 bg-zinc-900 dark:bg-white text-white dark:text-black font-bold text-xs uppercase tracking-widest rounded-full shadow-2xl flex items-center justify-center gap-3 transition-all"
                                 >
                                     Download CV
                                     <span className="material-symbols-outlined text-lg">download</span>
-                                </motion.button>
+                                </motion.a>
                                 
                                 <motion.button 
                                     whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
